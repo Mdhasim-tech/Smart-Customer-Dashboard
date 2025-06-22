@@ -1,0 +1,23 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stretch to full height */
+html, body {
+    height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Makes sure <main> fills the vertical space */
+main {
+  flex: 1;
+}
