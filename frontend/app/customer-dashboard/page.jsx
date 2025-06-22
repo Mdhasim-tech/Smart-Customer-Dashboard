@@ -10,7 +10,7 @@ export default function Page() {
 
   // Fetch cluster data on page load
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/clusters")
+    fetch("https://smart-customer-dashboard.onrender.com/clusters")
       .then((res) => res.json())
       .then((data) => setClusters(data));
   }, []);
@@ -19,7 +19,7 @@ export default function Page() {
   const handleClusterClick = (clusterObj) => {
     setSelectedCluster(clusterObj);
 
-    fetch(`http://127.0.0.1:5000/customers?cluster=${clusterObj.cluster}`)
+    fetch(`https://smart-customer-dashboard.onrender.com/customers?cluster=${clusterObj.cluster}`)
       .then((res) => res.json())
       .then((data) => setCustomers(data));
   };
