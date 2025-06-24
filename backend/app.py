@@ -22,7 +22,10 @@ def get_strategy(avg_income, avg_score):
     else:
         return "⚡ Balanced group – Use A/B testing to optimize marketing strategy."
 
-
+@app.route("/",methods=["GET"])
+def home():
+    return "Flask server is up and running!"
+    
 @app.route("/clusters", methods=["GET"])
 def get_clusters():
     clusters = df["cluster"].unique()
