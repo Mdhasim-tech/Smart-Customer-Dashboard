@@ -6,10 +6,6 @@ import joblib
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend
 
-@app.route('/ping')
-def ping():
-    return "I'm awake!"
-
 # Load model and clustered data
 model = joblib.load("kmeans_model.pkl")
 df = pd.read_csv("dataset.csv")  # This should include 'cluster' column
